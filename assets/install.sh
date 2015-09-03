@@ -30,8 +30,8 @@ postconf -e myhostname=$mydestination
 postconf -F '*/*/chroot = n'
 postconf -e inet_protocols=ipv4
 postconf -e 'home_mailbox=Maildir/'
-postconf -e 'smtpd_banner=$myhostname Microsoft ESMTP MAIL Service, Version: 5.0.2195.1600 ready'
 postconf -e disable_vrfy_command=yes
+postconf -e 'smtpd_banner=$myhostname Microsoft ESMTP MAIL Service ready'
 
 postconf -e virtual_alias_domains=$mydestination
 postconf -e virtual_alias_maps=hash:/etc/postfix/virtual
